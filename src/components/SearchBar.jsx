@@ -2,8 +2,10 @@ import React from 'react'
 
 function SearchBar() {
     return (
-        <div>
-            <h1>City name goes here in text box</h1>
+        <div className="searcBar">
+            <h3>Search for city</h3>
+            <input type="text"/>
+            <button type="button">search</button>
         </div>
     )
 }

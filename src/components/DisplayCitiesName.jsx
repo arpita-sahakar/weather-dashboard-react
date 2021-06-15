@@ -7,9 +7,7 @@ function DisplayCitiesName() {
             <button>Atlanta</button><br/>
             <button>Atlanta</button><br/>
             <button>Atlanta</button><br/>
-            <button>Atlanta</button>
-            
-
+            <button>Atlanta</button>        
         </div>
     )
 }

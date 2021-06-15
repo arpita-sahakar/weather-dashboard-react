@@ -26,5 +26,10 @@
 }
 
 .displayForcasts {
+  background-color: grey
+}
+
+.card{
   background-color: rgb(163, 140, 144);
+  width : 30%;
 }

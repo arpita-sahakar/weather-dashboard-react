@@ -49,22 +49,6 @@ function Display5DaysForcast() {
         </Card>
       </div>
 
-      {/* <div>
-      <h6>(Displaying the upcoming 5 days forecast)</h6>
-        <h2>Atlanta (6/15/2021)</h2>
-        <h4>Temparature : </h4>
-        <h4>Humidity : </h4>
-        <h4>Wind Speed : </h4>
-        <h4>UV Index : </h4>
-      </div> 
-
-      <div>
-        <h2>Atlanta (6/15/2021)</h2>
-        <h4>Temparature : </h4>
-        <h4>Humidity : </h4>
-        <h4>Wind Speed : </h4>
-        <h4>UV Index : </h4>
-      </div>  */}
     </div>
   );
 }

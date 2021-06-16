@@ -1,16 +1,28 @@
-import React from 'react'
+import React from "react";
+// import moment from 'moment';
 
-function DisplayCityForcast() {
-    return (
-        <div className ="abc">
-            <h6>(Displaying the current day forecast)</h6>
-            <h2>Atlanta (6/15/2021)</h2>
-            <h4>Temparature : </h4>
-            <h4>Humidity : </h4>
-            <h4>Wind Speed : </h4>
-            <h4>UV Index : </h4>
-        </div>
-    )
+function DisplayCityForcast({ weatherForecast }) {
+  //     const displayDate = (dateFromRes) => {
+  //         let now = new Date(dateFromRes);
+  //         let dateString = moment(now).format('YYYY-MM-DD');
+  //         return dateString
+  //     }
+  return (
+    <div className="abc">
+      <h2>
+        {weatherForecast.name} ({weatherForecast.dt})
+      </h2>
+      <h4>Temparature : {weatherForecast.main.temp}</h4>
+      <h4>Humidity : {weatherForecast.main.humidity}</h4>
+      <h4>Wind Speed : {weatherForecast.wind.speed}</h4>
+      <h4>
+        Weather description :
+        {weatherForecast.weather.map((el, i) => {
+          return el.description;
+        })}
+      </h4>
+    </div>
+  );
 }
 
-export default DisplayCityForcast
+export default DisplayCityForcast;

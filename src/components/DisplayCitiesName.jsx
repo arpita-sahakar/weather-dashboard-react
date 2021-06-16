@@ -1,13 +1,14 @@
 import React from 'react'
 
-function DisplayCitiesName() {
+function DisplayCitiesName({cityNames}) {
     return (
         <div className="displayCitiesName">
-            <h6>(displaying city names)</h6>
-            <button>Atlanta</button><br/>
-            <button>Atlanta</button><br/>
-            <button>Atlanta</button><br/>
-            <button>Atlanta</button>        
+            {cityNames.map((el,i) =>{
+                return (<div key={i}>
+                    <button>{el}</button><br/>
+                    </div>)
+            })}
+   
         </div>
     )
 }

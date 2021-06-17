@@ -8,7 +8,7 @@ import axios from "axios";
 
 function App() {
   const [textHandler, setTextHandler] = useState("atlanta");
-  const [weatherForecast, setWeatherForecast] = useState({});
+  const [weatherForecast, setWeatherForecast] = useState(null);
   const [cityNames, setCityNames] = useState([]);
 
   const getWeatherForecast = () => {
@@ -42,7 +42,7 @@ function App() {
         <DisplayCitiesName cityNames={cityNames} />
       </section>
       <DisplayCityForcast weatherForecast={weatherForecast} /> 
-      <Display5DaysForecast />
+      <Display5DaysForecast weatherForecast={weatherForecast}/>
     </div>
   );
 }

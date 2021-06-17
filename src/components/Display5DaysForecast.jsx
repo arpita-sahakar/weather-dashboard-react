@@ -58,7 +58,6 @@ function Display5DaysForcast({ weatherForecast }) {
                 Humidity : {weatherForecast.main.humidity}
               </Card.Title>
               <Card.Title>
-                {" "}
                 Weather description :
                 {weatherForecast.weather.map((el, i) => {
                   return el.description;

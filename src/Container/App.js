@@ -26,8 +26,15 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("hey");
+    localStorage.setItem("city-Key", JSON.stringify(cityNames));
+  }, [cityNames]);
+
+  useEffect(() => {
     getWeatherForecast();
+    console.log(localStorage.getItem("city-Key"));
+    if (localStorage.getItem("city-Key") != null) {
+      setCityNames(JSON.parse(localStorage.getItem("city-Key")));
+    }
   }, []);
 
   return (
@@ -39,10 +46,13 @@ function App() {
           getWeatherForecast={getWeatherForecast}
           textHandler={textHandler}
         />
-        <DisplayCitiesName cityNames={cityNames} />
+        <DisplayCitiesName
+          cityNames={cityNames}
+          setWeatherForecast={setWeatherForecast}
+        />
       </section>
-      <DisplayCityForcast weatherForecast={weatherForecast} /> 
-      <Display5DaysForecast weatherForecast={weatherForecast}/>
+      <DisplayCityForcast weatherForecast={weatherForecast} />
+      <Display5DaysForecast weatherForecast={weatherForecast} />
     </div>
   );
 }
